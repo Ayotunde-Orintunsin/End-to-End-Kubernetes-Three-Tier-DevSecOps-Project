@@ -94,8 +94,8 @@ pipeline {
                 dir('Kubernetes-Manifests-file/Frontend') {
                     withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]) {
                         sh '''
-                            git config user.email "idowuorintunsin@outlook.com"
-                            git config user.name "Ayotunde Orintunsin"
+                            git config user.email "jenkins-bot@ecodeepzone.com"
+                            git config user.name "Jenkins CI Bot"
                             BUILD_NUMBER=${BUILD_NUMBER}
                             echo $BUILD_NUMBER
                             imageTag=$(grep -oP '(?<=frontend:)[^ ]+' deployment.yaml)
