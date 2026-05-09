@@ -1,0 +1,17 @@
+# Terraform internal artifacts (never commit these)
+**/.terraform/
+**/.terraform.lock.hcl
+**/terraform.tfstate
+**/terraform.tfstate.backup
+**/tfplan
+**/crash.log
+
+# Binaries downloaded locally (not part of repo)
+/kubectl
+**/awscliv2.zip
+*.tar.gz
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
