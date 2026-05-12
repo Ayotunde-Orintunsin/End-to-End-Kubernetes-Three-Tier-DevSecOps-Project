@@ -3,11 +3,14 @@ kind: Service
 metadata:
   namespace: three-tier
   name: mongodb-svc
+  labels:
+    app: mongodb
 spec:
+  clusterIP: None    # Headless - gives stable pod DNS: mongodb-0.mongodb-svc.three-tier.svc.cluster.local
   selector:
     app: mongodb
   ports:
-  - name: mongodb-svc
-    protocol: TCP
-    port: 27017
-    targetPort: 27017
+    - name: mongodb
+      protocol: TCP
+      port: 27017
+      targetPort: 27017
